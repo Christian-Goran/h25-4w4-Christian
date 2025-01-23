@@ -4,3 +4,5 @@
 Créer une page d'acceuil en utilisant le standard BEM et Sass pour reproduire le conten de la maquette.
 
 Auteur: Christian Goran
+
+### Github-Page: https://github.com/Christian-Goran/h25-4w4-Christian
