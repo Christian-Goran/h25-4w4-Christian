@@ -5,4 +5,4 @@ Créer une page d'acceuil en utilisant le standard BEM et Sass pour reproduire l
 
 Auteur: Christian Goran
 
-### Github-Page: file:///Users/christiangoran/Downloads/4w4/tp1/index.html
+### Github-Page: https://christian-goran.github.io/h25-4w4-Christian/
