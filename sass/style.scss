@@ -24,4 +24,10 @@ Les Variables
 Les composants
 ///////////////// */
 @import "composants/menu";
-@import "composants/carte"
+@import "composants/carte";
+
+/* /////////////////
+Layout
+///////////////// */
+@import "layout/principale";
+@import "layout/entete";
