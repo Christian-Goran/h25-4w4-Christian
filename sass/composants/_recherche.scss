@@ -1,0 +1,25 @@
+.recherche{
+    display: flex;
+    
+    font-size: 1.2rem;
+    border: 1px solid rgba(0,0,0,0.1);
+    height: 1.2rem;
+    &__input{
+        opacity: 50%;
+
+        border: none;
+
+        outline: none;
+
+        background-color: rgba(0,0,0,0.02);
+
+        
+       
+    }
+    &:hover{
+                background-color: rgba(0,0,0,0.06);
+                opacity: 100%;
+            }
+
+   
+}

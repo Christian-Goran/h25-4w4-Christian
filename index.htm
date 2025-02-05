@@ -3,44 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Exercice 1 Christian Goran</title>
   <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
   <header>
-    <div class="entete global">
+    <div class="entete">
       <figure class="entete__logo">
-        <img src="" alt="">
+        <img src="images/logo_voyage.png" alt="" width="150" height="150">
       </figure>
-
-
+      <label for="chk__burger" class="burger">
+        <img src="https://s2.svgbox.net/hero-outline.svg?ic=menu&color=000" width="32" height="32">
+      </label>
+      <input type="checkbox" id="chk__burger" class="chk__burger">
       <div class="entete__nav">
         <nav class="entete__menu">
           <ul class="menu">
-            <li class="menu__li">
-              <a href="menu__a">Aventure</a>
-            </li>
+            <li class="menu__li"><a class="menu__a" href="#">Sport</a></li>
 
-            <li class="menu__li">
-              <a href="menu__a">Sportive</a>
-            </li>
+            <li class="menu__li"><a class="menu__a" href="#">Pleine Nature</a></li>  
+                      
+            <li class="menu__li"><a class="menu__a" href="#">Croisière</a></li>
 
-            <li class="menu__li">
-              <a href="menu__a">Culturelle</a>
-            </li>
+            <li class="menu__li"><a class="menu__a" href="#">Aventure</a></li>
 
-            <li class="menu__li">
-              <a href="menu__a">Zen</a>
-            </li>
-          </ul>
+            <li class="menu__li"><a class="menu__a" href="#">Culturel</a></li>
+
+            <li class="menu__li"><a class="menu__a" href="#">Repos</a></li>
+
+            <li class="menu__li"><a class="menu__a" href="#">Zen</a></li>
+
+            <li class="menu__li"><a class="menu__a" href="#">Économique</a></li>
+
+            <li class="menu__li"><a class="menu__a" href="#">Favoris</a></li>
+
+            <li class="menu__li"><a class="menu__a" href="#">Pays</a></li>
 
 
         </nav>
         <div class="entete__recherche">
-          <form action="" class="recherche">
+          <form class="recherche">
             <input type="text" class="recherche_input">
-            <img src="https://s2.svgbox.net/hero-outline.svg?ic=search"  width="32" height="32">
+            <img class="recherche_input" src="https://s2.svgbox.net/hero-outline.svg?ic=search"  width="32" height="32">
 
 
           </form>
@@ -50,11 +55,10 @@
   </header>
   <section class="hero">
     <h1 class="hero__titre">
-      Club de voyage
+      Voyagez autrement avec Mondo Voyages !
     </h1>
     <p class="hero__description">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed doloremque aperiam tenetur voluptatem porro saepe vero perferendis, odit repellat dignissimos maiores accusamus doloribus ipsa maxime qui architecto ipsum commodi quis!
-    </p>
+        Découvrez des destinations uniques et inoubliables avec Mondo Voyages. Nous vous offrons des expériences authentiques, des paysages à couper le souffle et des aventures sur mesure. Partez à la découverte du monde avec nous et crées des souvenirs imérissables    </p>
     <a href="" class="hero_courriel">
       info@cmaisonneuve.qc.ca
     </a>
@@ -63,32 +67,67 @@
     </button>
     <div class="hero__icone-app">
       <img src="https://s2.svgbox.net/materialui.svg?ic=facebook" width="20" height="20">
+
       <img src="https://s2.svgbox.net/social.svg?ic=linkedin" width="20" height="20">
+
       <img src="https://s2.svgbox.net/social.svg?ic=paypal" alt="" width="20" height="20">
+
+      <img src="https://s2.svgbox.net/social.svg?ic=stackoverflow" alt="" height="20" width="20">
     </div>
   </section>
 
   
-    <section class="galerie">
-      <figure class="galerie__fig">
-        <img src="" alt="">
-      </figure>
-    </section>
+    
+
   
 
 
 
-  <section class="promotion">
-  <div class="carte carte--grande">
-    <div class="carte__image">
-      <img src="images/plage.jpeg" alt="Image de voyage">
-    </div>
-    <div class="carte__contenu">
-      <h2 class="carte__titre">Destination de rêve</h2>
-      <p class="carte__description">Découvrez des endroits magnifiques à travers le monde.</p>
-      <button class="carte__bouton carte__bouton--actif">Réserver</button>
-    </div>
-  </div>  
-  </section>
+      <section class="carte">
+        <div class="carte--grande">
+          <div class="entete__recherche">
+            <h4 class="carte__contenu">Nom</h4>
+              <input type="text" class="carte__input" onfocus="this.value=''" value="Nom">
+          </div>
+          <div class="entete__recherche">
+            <h4 class="carte__contenu">Prénom</h4>
+              <input type="text" class="carte__input" onfocus="this.value=''" value="Prénom">
+          </div>
+          <div class="entete__recherche">
+            <h4 class="carte__contenu">Courriel</h4>
+              <input type="text" class="carte__input" onfocus="this.value=''" value="Courriel">
+          </div>
+          <div class="entete__recherche">
+            <h4 class="carte__contenu">Téléphone</h4>
+              <input type="text" class="carte__input" onfocus="this.value=''" value="Téléphone">
+          </div>
+          <button class="carte__bouton">S'inscrire</button>
+        </div>
+      </section>   
+      <section class="galerie">
+    <div class="galerie__contenu">
+        <h2 class="galerie__titre">Destinations de rêve</h2>
+        <div class="galerie__images">
+          <img src="./images/plage.jpeg" alt="" width="23%">
+
+          <img src="images/plage_2.jpg" alt="" width="23%">
+
+          <img src="./images/plage_3.jpg" alt="" width="23%">
+
+          <img src="images/plage_4.webp" alt="" width="23%">
+
+          <img src="images/plage_5.jpg" alt="" width="23%">
+
+          <img src="images/plage_7.jpeg" alt="" width="23%">
+
+          <img src="images/plage_8.jpeg" alt="" width="23%">
+
+          <img src="images/plagr_9.webp" alt="" width="23%">
+
+          <img src="images/plage_10.webp" alt="" width="23%">
+          
+          <img src="images/plage_6.jpeg" alt="" width="23%">
+        </div>
+      </div>
 </body>
 </html>

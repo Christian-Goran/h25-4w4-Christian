@@ -18,16 +18,25 @@ Text Domain: 4W4-christian
 Les Variables
 ///////////////// */
 @import "variables/couleurs";
+@import "variables/dimension";
 
+
+/* /////////////////
+Bases
+///////////////// */
+@import "base/lien";
+@import "base/simple";
 
 /* /////////////////
 Les composants
 ///////////////// */
 @import "composants/menu";
 @import "composants/carte";
+@import "composants/recherche";
 
 /* /////////////////
 Layout
 ///////////////// */
 @import "layout/principale";
 @import "layout/entete";
+@import "layout/footer";

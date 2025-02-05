@@ -1,9 +1,55 @@
+.burger{
+    display: none;
+    z-index: 3;
+    @media screen and (max-width: $point__rupture){
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+}
+.chk__burger{
+    display: none;
+}   
+    
+.chk__burger:checked ~ .entete__nav{
+    display: flex;
+}
+
+
+
+
 .entete{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
+    padding-top: 2vh;
+
 
     &__nav{
         display: flex;
+        position: static;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+        gap: 10px;
+        @media screen and (max-width: $point__rupture){
+            display: none;
+            flex-direction: column;
+            width: 100vw;
+            padding: 2vh;
+            gap: 30px 0;    
+            position: absolute;
+            top: 0;
+            right: 0;          
+            background-color: #fff;  
+        }
+        
+    }
+
+    &__logo{
+        margin: 0;
     }
 }

@@ -17,17 +17,39 @@ Text Domain: 4W4-christian
 Les Variables
 ///////////////// */
 /* /////////////////
+Bases
+///////////////// */
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: rgba(0, 0, 0, 0.1);
+}
+a:visited {
+  color: rgba(0, 0, 0, 0.3);
+}
+a:focus {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* /////////////////
 Les composants
 ///////////////// */
 .menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
-.menu__li {
-  display: inline-block;
+@media screen and (max-width: 700px) {
+  .menu {
+    flex-direction: column;
+  }
 }
-.menu__li__a {
+.menu__a {
   color: #333;
   text-decoration: none;
   padding: 2px 5px;
@@ -37,19 +59,27 @@ Les composants
 Le composant .carte
 ******************** */
 .carte {
-  border: 1px solid #ddd;
-  padding: 20px;
-  border-radius: 8px;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 2vh auto;
+  border: 1px solid #f0f0f0;
+  max-width: 85%;
+  margin-bottom: 150px;
+  height: 150px;
 }
 .carte--grande {
-  padding: 40px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5%;
 }
-.carte__image img {
-  max-width: 100%;
-  border-radius: 8px;
-}
-.carte__contenu {
-  margin-top: 15px;
+@media screen and (max-width: 700px) {
+  .carte--grande {
+    flex-direction: column;
+  }
 }
 .carte__titre {
   font-size: 24px;
@@ -73,25 +103,150 @@ Le composant .carte
 .carte__bouton:hover {
   background-color: #0056b3;
 }
+.carte__contenu {
+  margin: 0;
+  margin-top: 1vh;
+  padding-top: 1vh;
+}
+.carte__input {
+  width: 100%;
+  margin: 0 auto;
+  border: 2px solid rgb(27, 66, 162);
+  color: rgb(142, 142, 142);
+}
+.carte__input:hover {
+  border: 2px solid rgb(0, 190, 180);
+}
+
+.recherche {
+  display: flex;
+  font-size: 1.2rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  height: 1.2rem;
+}
+.recherche__input {
+  opacity: 50%;
+  border: none;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.02);
+}
+.recherche:hover {
+  background-color: rgba(0, 0, 0, 0.06);
+  opacity: 100%;
+}
 
 /* /////////////////
 Layout
 ///////////////// */
 .global {
   margin: 0 auto;
-  max-width: 1100px;
+  max-width: 1000px;
 }
 
 .hero {
   min-height: 100vh;
   background-image: url("images/maldives.jpg");
 }
+.hero__titre {
+  padding: 5vh;
+  font-size: 2.7rem;
+  text-shadow: 3px 3px 3px rgba(2, 159, 91, 0.707);
+}
+.hero__liens p, .hero button {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  margin: 2vh 0;
+}
+.hero__bouton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.668);
+  cursor: pointer;
+}
+.hero__bouton:hover {
+  background-color: rgba(255, 255, 255, 0.427);
+}
+.hero__bouton__contenu {
+  max-width: 80%;
+}
+.hero__bouton__description {
+  width: 150vw;
+}
+.hero .galerie {
+  max-width: 80%;
+  margin: 0 auto;
+  margin-bottom: 2vh;
+}
+.hero .galerie__images {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  column-gap: 1vw;
+  row-gap: 1vw;
+}
+.hero .galerie__images img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.burger {
+  display: none;
+  z-index: 3;
+}
+@media screen and (max-width: 700px) {
+  .burger {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+}
+
+.chk__burger {
+  display: none;
+}
+
+.chk__burger:checked ~ .entete__nav {
+  display: flex;
+}
 
 .entete {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
+  padding-top: 2vh;
 }
 .entete__nav {
   display: flex;
+  position: static;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+@media screen and (max-width: 700px) {
+  .entete__nav {
+    display: none;
+    flex-direction: column;
+    width: 100vw;
+    padding: 2vh;
+    gap: 30px 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+  }
+}
+.entete__logo {
+  margin: 0;
 }/*# sourceMappingURL=style.css.map */

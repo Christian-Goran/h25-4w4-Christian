@@ -4,22 +4,29 @@ Le composant .carte
 
 
 .carte {
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 8px;
+    
+    padding: 15px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);    
+    margin: 2vh auto;
+    border: 1px solid #f0f0f0;
+    max-width: 85%;
+    margin-bottom: 150px;
+    height: 150px;
   
     &--grande {
-      padding: 40px;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 5%;
+      @media screen and (max-width:$point__rupture) {
+        flex-direction: column;
+        
+      }
     }
   
-    &__image img {
-      max-width: 100%;
-      border-radius: 8px;
-    }
-  
-    &__contenu {
-      margin-top: 15px;
-    }
   
     &__titre {
       font-size: 24px;
@@ -45,6 +52,23 @@ Le composant .carte
   
       &:hover {
         background-color: #0056b3;
+      }
+    }
+
+    &__contenu{
+      margin: 0;
+      margin-top: 1vh;
+      padding-top: 1vh;
+    }
+
+    &__input {
+      width: 100%;
+      margin: 0 auto;
+      border: 2px solid rgb(27, 66, 162);
+      color: rgb(142, 142, 142);
+      
+      &:hover {
+        border: 2px solid rgb(0, 190, 180);
       }
     }
   }
