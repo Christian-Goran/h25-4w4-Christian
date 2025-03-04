@@ -1,5 +1,5 @@
 <footer>
-<div class="piedpage global">
+    <div class="piedpage global">
         <section class="piedpage__s1">
             <div class="piedpage__s1__externe">
                 <?php wp_nav_menu(array(
@@ -24,5 +24,6 @@
 
 
     </div>
-    </footer>
+</footer>
+<?php wp_footer() ?>
     <?php wp_footer(); ?>
