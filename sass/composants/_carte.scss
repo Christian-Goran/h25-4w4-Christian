@@ -1,74 +1,69 @@
-/* ********************
-Le composant .carte
-******************** */
-
-
 .carte {
+  display: flex;
+  align-items: center;
+  
+  max-width: 300px;
+  margin: 0 auto;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 3px;
+
+  background-color: white;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.253);
+
+  &__titre {
+    font-size: 1.3rem;
+    color: $lien;
     
-    padding: 15px;
-    border-radius: 5px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);    
-    margin: 2vh auto;
-    border: 1px solid #f0f0f0;
-    max-width: 85%;
-    margin-bottom: 150px;
-  
-    &--grande {
-      padding: 10px;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 5%;
-      @media screen and (max-width:$point__rupture) {
-        flex-direction: column;
-        
-      }
-    }
-  
-  
-    &__titre {
-      font-size: 24px;
-      color: #333;
-    }
-  
-    &__description {
-      font-size: 16px;
-      color: #666;
-    }
-  
-    &__bouton {
-      padding: 10px 20px;
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-  
-      &--actif {
-        background-color: #0056b3;
-      }
-  
-      &:hover {
-        background-color: #0056b3;
-      }
-    }
-
-    &__contenu{
-      margin: 0;
-      margin-top: 1vh;
-      padding-top: 1vh;
-    }
-
-    &__input {
-      width: 100%;
-      margin: 0 auto;
-      border: 2px solid rgb(27, 66, 162);
-      color: rgb(142, 142, 142);
-      
-      &:hover {
-        border: 2px solid rgb(0, 190, 180);
-      }
+    &:hover {
+      text-decoration: underline;
     }
   }
-  
+
+  &--grande {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 4%;
+    padding: 10px;
+
+    @media screen and (max-width:$point__rupture) {
+      flex-direction: column;
+    }
+  }
+
+  &__contenu {
+    margin: 0;
+    margin-bottom: 1vh;
+    padding-top: 1vh;
+  }
+
+  &__contenu img {
+    margin-bottom: 2vh;
+    display: flex;
+    justify-content: center;
+  }
+
+}
+
+.post-categories {
+  display: flex;
+  flex-direction: row;
+  padding-left: 0;
+  margin-top: 5vh;
+  gap: 2vw;
+  list-style: none;
+
+  & a {
+    padding: 0.6rem;
+    border: solid 1px $noir;
+    border-radius: 3px;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+      color: $noir;
+    }
+  }
+}

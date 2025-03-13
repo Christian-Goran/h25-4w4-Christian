@@ -1,0 +1,57 @@
+/*
+  --------------------------------- Composant hero
+*/
+
+.hero {
+    min-height: 100vh;
+    // background-image: url("images/bgHeader.jpg"); -- fait avec wordpress directement maintenant
+    background-repeat: no-repeat;
+  
+    &__titre {
+      padding-top: 10vh;
+      font-size: 3rem;
+      text-shadow: 3px 3px 3px rgba(255, 255, 255, 0.707);
+    }
+  
+    &__contenu {
+      max-width: 80%;
+    }
+  
+    &__description {
+      width: 40vw;
+    }
+  
+    &__liens p, button {
+      display: flex;
+      flex-direction: column;
+      font-weight: bold;
+      margin-top: 2vh;
+      margin-bottom: 2vh;
+    }
+  
+    &__bouton {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+      height: 40px;
+      border: none;
+      border-radius: 4px;
+  
+      background-color: rgba(255, 255, 255, 0.668);
+  
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.427);
+        cursor: pointer;
+      }
+    }
+  
+    &__info {
+      margin: 0;
+      margin-top: 6vh;
+  
+      & p {
+        margin: 0;
+      }
+    }
+  }
