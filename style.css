@@ -150,6 +150,7 @@ Layout
   padding: 5vh;
   font-size: 2.7rem;
   text-shadow: 3px 3px 3px rgba(2, 159, 91, 0.707);
+  background-repeat: no-repeat;
 }
 .hero__liens p, .hero button {
   display: flex;
