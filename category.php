@@ -1,7 +1,4 @@
-<?php /**
- *  category.php qui sera utiliser lorsqu'on affiche une catégorie avec les boutons du menu
- */
-?>
+    
 
 <?php get_header() ?>
 

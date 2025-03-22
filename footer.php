@@ -2,9 +2,13 @@
 
 <?php 
   $footer_auteur = get_theme_mod('general_auteur', 'Default Title');
+
   $footer_adresse = get_theme_mod('general_adresse', 'Default Title');
+
   $footer_telephone = get_theme_mod('general_telephone', 'Default Title');
+
   $footer_email = get_theme_mod('general_email', 'Default Title');
+  
   $footer_info = get_theme_mod('footer_mission', 'Default Title');
 ?>
 
@@ -23,8 +27,11 @@
                   </div>
 
                   <p class="piedpage__s1__coord"><?php echo($footer_auteur)?></p>
+
                   <p class="piedpage__s1__coord"><?php echo($footer_adresse)?></p> 
+
                   <p class="piedpage__s1__coord"><?php echo($footer_telephone)?></p> 
+
                   <p class="piedpage__s1__coord"><?php echo($footer_email)?></p> 
                   
                   <div class="piedpage__s1__icone-app">

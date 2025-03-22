@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>4W4-Voyage</title>
-    <!-- link rel="stylesheet" href="normalize.css" -->
-    <!-- link rel="stylesheet" href="style.css" -->
+
     <?php wp_head(); ?> 
 </head>
 <body>
@@ -21,38 +20,14 @@
             <input type="checkbox" id="chk__burger" class="chk__burger">
             <div class="entete__nav">
 
-            <?php wp_nav_menu(); ?>
-                <nav class="entete__menu">
-                    <ul class="menu">
-                        <li class="menu__li">
-                            <a class="menu__a" href="#">Aventure</a>
-                        </li>
-                        <li class="menu__li">
-                            <a class="menu__a" href="#">Sportive</a>
-                        </li>
-                        <li class="menu__li">
-                            <a class="menu__a"  href="#">Culturelle</a>
-                        </li>
-                        <li class="menu__li">
-                            <a  class="menu__a" href="#">Zen</a>
-                        </li>
-                        <li class="menu__li">
-                            <a class="menu__a" href="#">Sportive</a>
-                        </li>
-                        <li class="menu__li">
-                            <a class="menu__a"  href="#">Culturelle</a>
-                        </li>
-                        <li class="menu__li">
-                            <a  class="menu__a" href="#">Zen</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="entete__recherche">
-                    <form  class="recherche">
-                        <input type="text" class="recherche__input">
-                        <img  class="recherche__img" src="https://s2.svgbox.net/hero-outline.svg?ic=search&color=000" width="20" height="20">
-                    </form>
-                </div>
+            <?php wp_nav_menu(array(
+                    		'menu'                 => 'principal',
+                            'container'            => 'nav',
+                            'container_class'      => 'entete__menu',
+                )); ?>
+
+                    <?php get_search_form(); ?>
+                
             </div>
         </div>
     </header>
