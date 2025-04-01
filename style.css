@@ -159,6 +159,11 @@ Les composants
   padding: 1rem;
   background-color: rgba(255, 255, 255, 0.15);
   border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 .erreur-404__bouton {
   display: inline-block;
@@ -166,7 +171,7 @@ Les composants
   font-size: 1.2rem;
   color: rgb(122, 182, 230);
   font-weight: bold;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: yellow;
   border-radius: 8px;
   transition: color 0.3s ease-in-out;
 }
@@ -179,6 +184,7 @@ Les composants
   justify-content: center;
   gap: 1rem;
   margin: 3rem 0;
+  background-color: yellow;
 }
 .erreur-404__suggestions a {
   padding: 1rem 2rem;
@@ -193,6 +199,31 @@ Les composants
 }
 .erreur-404__recherche {
   margin-top: 2rem;
+}
+
+.erreur__nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+.erreur__nav .erreur__menu {
+  display: flex;
+  gap: 10px;
+}
+.erreur__nav a {
+  background-color: #ffde59;
+  color: #000;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+  font-size: 16px;
+}
+.erreur__nav a:hover {
+  background-color: #ffd700;
+  transform: scale(1.05);
 }
 
 /* /////////////////

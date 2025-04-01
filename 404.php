@@ -1,65 +1,39 @@
 <?php
 /**
- *  404.php. Page qui apparait lors de l'erreur 404
+ *  404.php - Page qui apparait lors de l'erreur 404
  */
 ?>
 
 <?php 
   $image_erreur_404 = get_theme_mod('erreur_image_fond', '');
-  $couleur_erreur_404 = get_theme_mod('erreur_couleur_fond', '#ffffff');
+  $couleur_erreur_404 = get_theme_mod('erreur_couleur_fond', 'Default Title');
+  $couleur_texte_404 = get_theme_mod('erreur_couleur_texte', 'Default Title');
 
   $titre_erreur_404 = get_theme_mod('erreur_titre', 'Default Title');
-  $message_erreur_404 = get_theme_mod('erreur_message', 'Default Title');
-
+  $message_erreur_404 = get_theme_mod('erreur_message', "Default Title");
+  
   $lien_retour_accueil = get_theme_mod('erreur_lien_accueil', home_url());
-
-  $suggestion_article_1 = get_theme_mod('erreur_404_nom_article_1', 'Default Title');
-  $lien_suggestion_1 = get_theme_mod('erreur_404_lien_article_1', 'Default Title');
-
-  $suggestion_article_2 = get_theme_mod('erreur_404_nom_article_2', 'Default Title');
-  $lien_suggestion_2 = get_theme_mod('erreur_404_lien_article_2', 'Default Title');
-
-  $suggestion_article_3 = get_theme_mod('erreur_404_nom_article_3', 'Default Title');
-  $lien_suggestion_3 = get_theme_mod('erreur_404_lien_article_3', 'Default Title');
-
-  $suggestion_article_4 = get_theme_mod('erreur_404_nom_article_4', 'Default Title');
-  $lien_suggestion_4 = get_theme_mod('erreur_404_lien_article_4', 'Default Title');
 ?>
 
 <?php get_header(); ?>
     
-  <section class="erreur-404" style="background-image: url(<?php echo esc_url($image_erreur_404); ?>); background-color: <?php echo esc_attr($couleur_erreur_404); ?>;">
-    <h1 class="erreur-404__titre"><?php echo esc_html($titre_erreur_404); ?></h1>
-    <h3 class="erreur-404__message"><?php echo esc_html($message_erreur_404); ?></h3>
+<section class="erreur-404" style="background-image: url(<?php echo esc_url($image_erreur_404); ?>); background-color: <?php echo esc_attr($couleur_erreur_404); ?>; color: <?php echo esc_attr($couleur_texte_404); ?>;">
+    <h1 class="erreur-404__titre"> <?php echo esc_html($titre_erreur_404); ?> </h1>
+    <h3 class="erreur-404__message"> <?php echo esc_html($message_erreur_404); ?> </h3>
 
-    <a href="<?php echo esc_url($lien_retour_accueil); ?>" class="erreur-404__bouton no-underline">Retourner à la page d'accueil</a>
+    <a href="<?php echo esc_url($lien_retour_accueil); ?>" class="erreur-404__bouton">Retourner à l'accueil</a>
 
-    <div class="erreur-404__suggestions">
-      <?php if ($suggestion_article_1) : ?>
-        <a href="<?php echo esc_url($lien_suggestion_1); ?>" style="background-color: <?php echo esc_attr($couleur_erreur_404); ?>;">
-          <?php echo esc_html($suggestion_article_1); ?>
-        </a>
-      <?php endif; ?>
-      <?php if ($suggestion_article_2) : ?>
-        <a href="<?php echo esc_url($lien_suggestion_2); ?>" style="background-color: <?php echo esc_attr($couleur_erreur_404); ?>;">
-          <?php echo esc_html($suggestion_article_2); ?>
-        </a>
-      <?php endif; ?>
-      <?php if ($suggestion_article_3) : ?>
-        <a href="<?php echo esc_url($lien_suggestion_3); ?>" style="background-color: <?php echo esc_attr($couleur_erreur_404); ?>;">
-          <?php echo esc_html($suggestion_article_3); ?>
-        </a>
-      <?php endif; ?>
-      <?php if ($suggestion_article_4) : ?>
-        <a href="<?php echo esc_url($lien_suggestion_4); ?>" style="background-color: <?php echo esc_attr($couleur_erreur_404); ?>;">
-          <?php echo esc_html($suggestion_article_4); ?>
-        </a>
-      <?php endif; ?>
-    </div>
+    <nav class="erreur__nav">
+        <?php wp_nav_menu(array(
+            'menu'            => 'menu_404',
+            'container'       => 'div',
+            'container_class' => 'erreur__menu',
+        )); ?>
+    </nav>
 
-    <div class="erreur-404__recherche">
-        <?php get_search_form(); ?>
-    </div>
-  </section>
+    <form class="erreur__recherche" role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>" style="border-bottom: 2px solid <?php echo esc_attr($couleur_texte_404); ?>; color: <?php echo esc_attr($couleur_texte_404); ?>;">
+        <input class="erreur__recherche--input" type="search" placeholder="Rechercher..." value="<?php echo get_search_query(); ?>" name="s" />
+    </form>
+</section>
 
 <?php get_footer(); ?>
