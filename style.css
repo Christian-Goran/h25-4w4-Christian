@@ -132,31 +132,61 @@ Les composants
 }
 
 .erreur-404 {
+  background-size: cover;
   text-align: center;
   padding: 100px 20px;
-  color: #333;
+  color: #ffffff;
+  font-family: "Arial", sans-serif;
 }
-.erreur-404 h1 {
-  font-size: 4rem;
-  color: #e74c3c;
-  margin-bottom: 20px;
+.erreur-404__titre {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ffcc00;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
-.erreur-404 p {
+.erreur-404__message {
   font-size: 1.5rem;
-  margin-bottom: 30px;
+  margin-top: 20px;
 }
-
-.btn-retour {
+.erreur-404__bouton {
   display: inline-block;
-  padding: 10px 30px;
-  background: #3498db;
-  color: #fff;
+  background-color: #ffcc00;
+  color: #000;
+  padding: 15px 30px;
+  margin-top: 30px;
   text-decoration: none;
-  border-radius: 5px;
-  transition: 0.3s;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 8px;
 }
-.btn-retour:hover {
-  background: #2980b9;
+.erreur-404__bouton:hover {
+  background-color: #b38f00;
+}
+.erreur-404__suggestions {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.erreur-404__suggestions a {
+  background-color: #ffcc00;
+  color: #000;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+.erreur-404__suggestions a:hover {
+  background-color: #b38f00;
+}
+.erreur-404__recherche {
+  margin-top: 30px;
+}
+.erreur-404__recherche input[type=text] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
 }
 
 /* /////////////////

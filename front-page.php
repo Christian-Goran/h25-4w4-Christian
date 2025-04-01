@@ -14,9 +14,7 @@
             
             <div class="hero__icone-app">
               
-                <?php get_template_part('gabarit/icones_sociaux')?>
-            
-                </div>
+                
         
     </div>
     
