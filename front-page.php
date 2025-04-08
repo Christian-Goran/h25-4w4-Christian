@@ -26,7 +26,12 @@
         <?php get_template_part('gabarit/carte')?>
     
     </section>
-    
+    <!-- ////////////////////////////////////// Section destination REST-API -->
+    <?php categories_liste("destinations")?>
+    <section class="destination">
+        <h2 class="destination__titre">Articles de la catégorie</h2>
+        <div class="destination__list"></di>
+        </section>
     <?php get_footer(); ?>
 </body>
 </html>
