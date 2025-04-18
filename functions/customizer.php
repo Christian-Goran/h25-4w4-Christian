@@ -74,32 +74,20 @@ function theme_31w_customize_register($wp_customize) {
   ));
 
   // background
-  $wp_customize->add_setting('hero_background', array(
-    'default' => '',
-    'sanitize_callback' => 'esc_url_raw',
-  ));
+  // $wp_customize->add_setting('hero_background', array(
+  //   'default' => '',
+  //   'sanitize_callback' => 'esc_url_raw',
+  // ));
 
-  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background', array(
-    'label' => __('Hero Background Image', 'theme_31w'),
-    'section' => 'hero_section',
-  )));
+  // $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background', array(
+  //   'label' => __('Hero Background Image', 'theme_31w'),
+  //   'section' => 'hero_section',
+  // )));
 
 
  
 
-  function theme_tp_enqueue_styles() { 
-    wp_enqueue_style('normalize', get_template_directory_uri() . '/normalize.css'); 
-    wp_enqueue_style('main-style', get_stylesheet_uri()); 
 
-    wp_enqueue_script(
-      'destination_restapi',
-      get_template_directory_uri() . '/js/destination.js',
-      array(),
-      filemtime(get_template_directory() . 
-      '/js/destination.js'),
-      true
-  );
-    } 
     add_action('wp_enqueue_scripts', 'theme_tp_enqueue_styles');
 
 
@@ -186,6 +174,22 @@ function theme_31w_customize_register($wp_customize) {
       'section' => 'erreur_section',
   )));
 
+ /////////// info pour le carousel
+  for ($k = 0; $k<3 ; $k++) {
+    $wp_customize->add_setting('hero_background_' . $k, array(
+      'default' => '',
+      'sanitize_callback' => 'esc_url_raw',
+    ));
+    ///////////////////////////////// ajout du contrôle de la donnée
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background_' . $k, array(
+      'label' => __('Image en arrière plan ' . ($k+1) , 'theme_tp'),
+      'section' => 'hero_section',
+    )));
+    }
+
 
 } 
+
+
+
 add_action('customize_register', 'theme_31w_customize_register');?>
