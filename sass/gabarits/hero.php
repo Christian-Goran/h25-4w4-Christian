@@ -3,14 +3,14 @@
 
   for ($i=0; $i<$nombre_img_bg; $i++){
   $hero_background[$i] = get_theme_mod('hero_background'. $i, '');
-  }
+  } print_r($hero_background);
 ?>
 
 <section class="hero">
   <?php 
     for ($j = 0; $j<$nombre_img_bg; $j++){
   ?>
-    <div class="hero__carroussel" style="background-image: url(<?php echo $hero_background[$j] ?>)"></div>
+    <div class="hero__carroussel" style="background-image: url('<?php echo $hero_background[$j] ?>')"></div>
   <?php } ?>
 
     <div class="hero__contenu global">

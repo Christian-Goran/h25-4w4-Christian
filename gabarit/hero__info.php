@@ -6,10 +6,10 @@
 ?>
 
 <h1 class="hero__titre">
-    Club de voyages IHOP
+Voyagez autrement avec Mondo Voyages !
 </h1>
 <p class="hero__description">
-    Avec IHOP, vous allez faire les plus beaux voyages de votre vie! Faites nous confiance, on vous en supplie...
+Découvrez des destinations uniques et inoubliables avec Mondo Voyages. Nous vous offrons des expériences authentiques, des paysages à couper le souffle et des aventures sur mesure. Partez à la découverte du monde avec nous et crées des souvenirs impérissables
 </p>
 <button class="hero__bouton">
     Inscription

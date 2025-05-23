@@ -1,21 +1,30 @@
 <?php 
-  $hero_auteur = get_theme_mod('general_auteur', 'Default Title');
-  $hero_adresse = get_theme_mod('general_adresse', 'Default Title');
-  $hero_telephone = get_theme_mod('general_telephone', 'Default Title');
-  $hero_email = get_theme_mod('general_email', 'Default Title');
+  $nombre_img_bg = get_theme_mod('nombre_img_bg', '1');
+
+  for ($i=0; $i<$nombre_img_bg; $i++){
+  $hero_background[$i] = get_theme_mod('hero_background_'. $i, '');
+  } print_r($hero_background);
 ?>
 
-<h1 class="hero__titre">
-    Club de voyages Mondo
-</h1>
-<p class="hero__description">
-Faites partie de notre club de voyage et profitez de nos offres exclusives !!!
-<button class="hero__bouton">
-    Inscription
-</button>
-<div class="hero__info">
-  <p><?php echo($hero_auteur);?></p>
-  <p><?php echo($hero_adresse);?></p>
-  <p><?php echo($hero_telephone);?></p>
-  <p><?php echo($hero_email);?></p>
-</div>
+<section class="hero">
+  <?php 
+    for ($j = 0; $j<$nombre_img_bg; $j++){
+  ?>
+    <div class="hero__carroussel" style="background-image: url('<?php echo $hero_background[$j] ?>')"></div>
+  <?php } ?>
+
+    <div class="hero__contenu global">
+        <?php get_template_part('gabarit/hero__info')?>
+        <div class="hero__icone-app">
+          <?php get_template_part('gabarit/icones_sociaux')?>
+        </div>
+    </div>
+    
+    <div class="hero__radio">
+      <?php 
+        for ($k = 0; $k<$nombre_img_bg; $k++){
+          echo "<input  class=\"hero__radio__input\" data-id_radio=\"$k\"   type=\"radio\" name=\"carroussel\"  checked=\"checked\">";
+        }
+      ?>
+    </div>
+</section>
