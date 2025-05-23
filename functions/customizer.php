@@ -62,6 +62,106 @@ function theme_31w_customize_register($wp_customize) {
     'type' => 'text',
   ));
 
+   /*
+  *** ICONES SOCIAUX ***
+  */
+  $wp_customize->add_section('social_section', array(
+    'title' => __('Icones Sociaux', 'theme_31w'),
+    'priority' => 30,
+  ));
+
+
+  // Icone Social 1
+  $wp_customize->add_setting('icone1', array(
+    'default' => '',
+    'sanitize_callback' => 'esc_url_raw',
+  ));
+
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'icone1', array(
+    'label' => __('Img Icone 1', 'theme_31w'),
+    'section' => 'social_section',
+  )));
+
+  $wp_customize->add_setting('link1', array(
+    'default' => __('', 'theme_31w'),
+    'sanitize_callback' => 'sanitize_text_field'
+  ));
+
+  $wp_customize->add_control('link1', array(
+    'label' => __('Lien Icone 1', 'theme_31w'),
+    'section' => 'social_section',
+    'type' => 'text_area',
+  ));
+
+
+  // Icone Social 2
+  $wp_customize->add_setting('icone2', array(
+    'default' => '',
+    'sanitize_callback' => 'esc_url_raw',
+  ));
+
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'icone2', array(
+    'label' => __('Img Icone 2', 'theme_31w'),
+    'section' => 'social_section',
+  )));
+
+  $wp_customize->add_setting('link2', array(
+    'default' => __('', 'theme_31w'),
+    'sanitize_callback' => 'sanitize_text_field'
+  ));
+
+  $wp_customize->add_control('link2', array(
+    'label' => __('Lien Icone 2', 'theme_31w'),
+    'section' => 'social_section',
+    'type' => 'text_area',
+  ));
+
+
+  // Icone Social 3
+  $wp_customize->add_setting('icone3', array(
+    'default' => '',
+    'sanitize_callback' => 'esc_url_raw',
+  ));
+
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'icone3', array(
+    'label' => __('Img Icone 3', 'theme_31w'),
+    'section' => 'social_section',
+  )));
+
+  $wp_customize->add_setting('link3', array(
+    'default' => __('', 'theme_31w'),
+    'sanitize_callback' => 'sanitize_text_field'
+  ));
+
+  $wp_customize->add_control('link3', array(
+    'label' => __('Lien Icone 3', 'theme_31w'),
+    'section' => 'social_section',
+    'type' => 'text_area',
+  ));
+
+
+  // Icone Social 4
+  $wp_customize->add_setting('icone4', array(
+    'default' => '',
+    'sanitize_callback' => 'esc_url_raw',
+  ));
+
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'icone4', array(
+    'label' => __('Img Icone 4', 'theme_31w'),
+    'section' => 'social_section',
+  )));
+
+  $wp_customize->add_setting('link4', array(
+    'default' => __('', 'theme_31w'),
+    'sanitize_callback' => 'sanitize_text_field'
+  ));
+
+  $wp_customize->add_control('link4', array(
+    'label' => __('Lien Icone 4', 'theme_31w'),
+    'section' => 'social_section',
+    'type' => 'text_area',
+  ));
+
 
 
 
@@ -107,6 +207,40 @@ function theme_31w_customize_register($wp_customize) {
 
   $wp_customize->add_control('footer_mission', array(
     'label' => __('Mission', 'theme_31w'),
+    'section' => 'footer_section',
+    'type' => 'text_area',
+  ));
+
+  $wp_customize->add_setting('footer_img', array(
+    'default' => '',
+    'sanitize_callback' => 'esc_url_raw',
+  ));
+
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'footer_img', array(
+    'label' => __('Image Footer', 'theme_31w'),
+    'section' => 'footer_section',
+  )));
+
+  // texte image footer
+  $wp_customize->add_setting('footer_img_texte', array(
+    'default' => __('', 'theme_31w'),
+    'sanitize_callback' => 'sanitize_text_field'
+  ));
+
+  $wp_customize->add_control('footer_img_texte', array(
+    'label' => __('IMG Texte', 'theme_31w'),
+    'section' => 'footer_section',
+    'type' => 'text_area',
+  ));
+
+  // lien image footer
+  $wp_customize->add_setting('footer_img_lien', array(
+    'default' => __('', 'theme_31w'),
+    'sanitize_callback' => 'sanitize_text_field'
+  ));
+
+  $wp_customize->add_control('footer_img_lien', array(
+    'label' => __('IMG Lien', 'theme_31w'),
     'section' => 'footer_section',
     'type' => 'text_area',
   ));
@@ -186,6 +320,17 @@ function theme_31w_customize_register($wp_customize) {
       'section' => 'hero_section',
     )));
     }
+
+    $wp_customize->add_setting('nombre_img_bg', array(
+      'default' => __('', 'theme_31w'),
+      'sanitize_callback' => 'sanitize_text_field'
+    ));
+  
+    $wp_customize->add_control('nombre_img_bg', array(
+      'label' => __('Nombre d\'images de background', 'theme_31w'),
+      'section' => 'hero_section',
+      'type' => 'number',
+    ));
 
 
 } 

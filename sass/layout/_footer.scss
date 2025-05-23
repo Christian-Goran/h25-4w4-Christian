@@ -1,29 +1,103 @@
-footer{
-    background-color: rgb(236, 136, 13);
-    color : #000;
+.vague {
+    position: relative;
+    top: 6px;
+  }
+  
+  footer {
+    background-color: rgb(30, 32, 49);
+    color: white;
+  
+    & a {
+      color: white;
+    
+      &:hover {
+        color: rgba(236, 236, 236, 0.8);
+      }
+    
+      &:visited {
+        color: white;
+      }
+    }
+  
+    & img {
+      filter: invert(1);
+    }
   }
   
   .piedpage{
       display: flex;
       flex-direction: column;
+      padding-top: 1vh;
+      padding-bottom: 3vh;
+      max-width: 80%;
+  
       &__s1{
           display: flex;
           flex-wrap: wrap;
-          gap: 3rem;
+          justify-content: center;
+          gap: 2rem;
+          flex : 0 0 30%;
+          margin-top: 2vh;
+  
+          & div {
+            width: 30%;
+          }
           &__externe {
-              flex : 0 0 20%;
-              & .menu { //ul
+  
+              & h2 {
+                margin: 0 auto;
+                margin-bottom: 1vh;
+              }
+  
+              & .menu__ext {
                   display : flex;
                   flex-direction: column;
               }
-  
-  
           }
-          &__adresse{
-              flex : 0 0 40%;
+          &__coord {
+            margin: 0;
           }
-          &__description{
-              flex:1 0 400px;
+          &__icone-app {
+            margin-top: 3vh;
+          }
+          &__description {
+            margin: 0 auto;
+            margin-top: 10vh;
+            width: 80%;
+            text-align: center;
           }
       }
+  
+      
+  
+      &__img img {
+        filter: invert(0);
+      }
+  
+      &__img a {
+        display: flex;
+        margin-bottom: 3vh;
+        text-align: center;
+      }
+  }
+  
+  .piedpage__s1__adresse__recherche .recherche {
+    margin-bottom: 3vh;
+    border: none;
+    
+    &:hover {
+      border: none;
+    }
+  
+    &__input:hover {
+      background-color: rgb(236, 236, 236);
+    }
+  }
+  
+  .piedpage__s1__externe #menu-principal-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 3vh;
+    padding-left: 0;
   }

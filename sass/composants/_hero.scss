@@ -4,7 +4,7 @@
 
 .hero {
     min-height: 100vh;
-    
+    background-repeat: no-repeat;
   
     &__titre {
       padding-top: 10vh;
@@ -59,7 +59,7 @@
       width : 100%;
       background-position: center;
       z-index : -1;
-      background-repeat: no-repeat;
+   
 
    }
    &__contenu {

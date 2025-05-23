@@ -1,37 +1,30 @@
-<?php  
-    $hero_auteur = get_theme_mod('hero_auteur', 'Default Title');
-    for ($k=0; $k<3; $k++){
-    $hero_background[$k] = get_theme_mod('hero_background_'. $k, '');
-    }
-     ?>
-    <section class="hero">
-        <div class="hero__carrousel" style="background-image: url(<?php echo $hero_background[0] ?>)"></div>
-        <div class="hero__carrousel" style="background-image: url(<?php echo $hero_background[1] ?>)"></div>
-        <div class="hero__carrousel" style="background-image: url(<?php echo $hero_background[2] ?>)"></div>
-        <div class="hero__radio">
+<?php 
+  $nombre_img_bg = get_theme_mod('nombre_img_bg', '1');
 
-        <input class="hero__radio__input" type="radio"  name="carrousel" data-id_carrousel="0">
-        <input class="hero__radio__input" type="radio"  name="carrousel" data-id_carrousel="1">
-        <input class="hero__radio__input" type="radio"  name="carrousel" data-id_carrousel="2">
+  for ($i=0; $i<$nombre_img_bg; $i++){
+  $hero_background[$i] = get_theme_mod('hero_background'. $i, '');
+  }
+?>
+
+<section class="hero">
+  <?php 
+    for ($j = 0; $j<$nombre_img_bg; $j++){
+  ?>
+    <div class="hero__carroussel" style="background-image: url(<?php echo $hero_background[$j] ?>)"></div>
+  <?php } ?>
+
+    <div class="hero__contenu global">
+        <?php get_template_part('gabarit/hero__info')?>
+        <div class="hero__icone-app">
+          <?php get_template_part('gabarit/icones_sociaux')?>
+        </div>
+    </div>
     
-        </div>
-        <div class="hero__contenu global">
-            <h1 class="hero__titre"><?php bloginfo('name'); ?></h1>
-            <p class="hero__description">
-            <?php bloginfo('description'); ?>
-            </p>
-            <p class="hero__courriel">
-            <?php bloginfo('admin_email'); ?>
-            </p>
-            <p class="hero__adresse">
-                5800 Sherbrooke-est - Montréal (Québec) H1X 2A2
-            </p>
-            <p class="hero__auteur">Auteur : <?php  echo $hero_auteur ?></p>
-            <div class="hero__icone">
-                <img src="https://s2.svgbox.net/social.svg?ic=facebook&color=000000" width="20" height="20">
-                <img src="https://s2.svgbox.net/social.svg?ic=linkedin&color=000000" width="20" height="20">
-                <img src="https://s2.svgbox.net/social.svg?ic=stackoverflow&color=000000" width="20" height="20">
-                <img src="https://s2.svgbox.net/social.svg?ic=snapchat&color=000000" width="20" height="20">
-            </div>
-        </div>
-    </section>
+    <div class="hero__radio">
+      <?php 
+        for ($k = 0; $k<$nombre_img_bg; $k++){
+          echo "<input  class=\"hero__radio__input\" data-id_radio=\"$k\"   type=\"radio\" name=\"carroussel\"  checked=\"checked\">";
+        }
+      ?>
+    </div>
+</section>
