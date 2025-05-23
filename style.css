@@ -55,6 +55,14 @@ Les composants
   padding: 2px 5px;
 }
 
+#menu-ListeDesPays {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px auto;
+}
+
 .carte {
   display: flex;
   align-items: center;
@@ -282,24 +290,53 @@ Les composants
 .hero__info p {
   margin: 0;
 }
-.hero__carrousel {
+.hero__carroussel {
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  min-height: 100vh;
+  z-index: -1;
+  opacity: 0;
+  animation-name: fondu_invisible;
+  animation-duration: 0.5s;
+}
+@keyframes fondu_invisible {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.hero__carroussel--active {
   position: absolute;
   min-height: 100vh;
   width: 100%;
   background-position: center;
+  background-repeat: no-repeat;
   z-index: -1;
+  opacity: 1;
+  animation-name: fondu_visible;
+  animation-duration: 0.5s;
 }
-.hero__contenu {
-  z-index: 9;
+@keyframes fondu_visible {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 .hero__radio {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  z-index: -1;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
 }
+
 /* /////////////////
 Layout
 ///////////////// */
@@ -464,4 +501,12 @@ footer img {
   justify-content: center;
   margin-bottom: 3vh;
   padding-left: 0;
+}
+
+.destinationLesPays {
+  background-color: #fff2ab;
+  position: relative;
+  padding: 60px 20px;
+  z-index: 0;
+  margin-bottom: 0;
 }/*# sourceMappingURL=style.css.map */

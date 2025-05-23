@@ -24,6 +24,13 @@
           text-decoration: none;
           padding: 2px 5px;
         }
+        
       
     }
-  
+    #menu-ListeDesPays {
+      display: flex;
+      justify-content: center;  
+      flex-wrap: wrap;          
+      gap: 10px;                
+      margin: 20px auto;        
+    }

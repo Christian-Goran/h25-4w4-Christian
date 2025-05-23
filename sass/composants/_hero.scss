@@ -53,27 +53,57 @@
         margin: 0;
       }
     }
-    &__carrousel{
+    
+  &__carroussel{
+    @keyframes fondu_invisible {
+      from {opacity: 1;}
+      to {opacity: 0;}
+    }
+    width : 100%;
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    background-size: cover;
+
+    position : absolute;
+    
+    min-height: 100vh;
+    
+    
+    z-index : -1;
+    opacity: 0;
+    
+    animation-name: fondu_invisible;
+    animation-duration: 0.5s;
+
+    
+
+    &--active{
       position : absolute;
       min-height: 100vh;
       width : 100%;
       background-position: center;
+      background-repeat: no-repeat;
       z-index : -1;
-   
+      opacity: 1;
 
-   }
-   &__contenu {
-       z-index : 9;
-   }
+      animation-name: fondu_visible;
+      animation-duration: 0.5s;
+    }
 
-   &__radio{
-    position : absolute;
-    top : 0;
-    left : 0;
+    @keyframes fondu_visible {
+      from {opacity: 0;}
+      
+      to {opacity: 1;}
+    }
+ }
+
+  &__radio {
     width : 100%;
-    height : 100%;
-    z-index : -1;
-
-      &__input{}
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    gap : 2rem;
    }
   }
